@@ -28,7 +28,7 @@ function displaySearchList(data) {
         </div>
         </div>
         </a>`
-    );
+    ).join('');
     return galleryEl.insertAdjacentHTML('beforeend', result);
 }
 const slider = new SimpleLightbox('.gallery__item', { captions:true, captionSelector:'img', captionType:'attr', captionsData: 'alt', captionDelay: 250});

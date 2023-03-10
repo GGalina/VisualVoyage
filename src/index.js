@@ -20,6 +20,7 @@ async function onSearch(event) {
     loadMoreBtnEl.classList.add('is-hidden');
     galleryEl.innerHTML = '';
     searchImg.query = event.currentTarget.elements['searchQuery'].value;
+    searchImg.firstPage();
 
     try {
         const returnedData = await searchImg.fetchData();
