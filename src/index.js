@@ -30,6 +30,7 @@ async function onSearch(event) {
             Notify.success(`Hooray! We found ${returnedData.totalHits} images.`);
             displaySearchList(returnedData.hits);
             loadMoreBtnEl.classList.remove('is-hidden');
+            slider.refresh();
         }
     }
     catch (error) {
@@ -42,7 +43,7 @@ async function onLoadMore(event) {
     try {
         const returnedData = await searchImg.fetchData();
         displaySearchList(returnedData.hits);
-        
+
         const { height: cardHeight } = document
         .querySelector(".gallery")
         .firstElementChild.getBoundingClientRect();
