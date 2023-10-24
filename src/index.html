@@ -8,9 +8,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Homework 11</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>VisualVoyage</title>
   </head>
+
   <body>
+    <header class="header">
+      <h1 class="logo"><span class="accent">V</span>isual<span class="accent">V</span>oyage</h1>
+      <h6 class="slogan">Discover the World in Pictures</h6>
+    </header>
+
     <form class="search-form" id="search-form">
       <input
         type="text"
@@ -20,10 +30,13 @@
       />
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
+
     <div class="gallery"></div>
+    
     <div class="button-container">
       <button type="submit" class="load-more is-hidden">Load more</button>
     </div>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>

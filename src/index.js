@@ -24,6 +24,7 @@ async function onSearch(event) {
 
     try {
         const returnedData = await searchImg.fetchData();
+
         if (returnedData.hits.length === 0) {
             Notify.failure('Sorry, there are no images matching your search query. Please try again.');
             return;
@@ -35,12 +36,13 @@ async function onSearch(event) {
         }
     }
     catch (error) {
-            console.log(error)
+        console.log(error)
         }
 };
 
 async function onLoadMore(event) {
     event.preventDefault();
+
     try {
         const returnedData = await searchImg.fetchData();
         displaySearchList(returnedData.hits);
@@ -50,8 +52,8 @@ async function onLoadMore(event) {
         .firstElementChild.getBoundingClientRect();
 
         window.scrollBy({
-        top: cardHeight * 2,
-        behavior: "smooth",
+            top: cardHeight * 2,
+            behavior: "smooth",
         });
         slider.refresh();
       
